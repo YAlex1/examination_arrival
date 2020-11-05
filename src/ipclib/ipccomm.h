@@ -58,7 +58,7 @@ private:
 }; // class IpcComm
 
 /*
- *@brief Object's constraction method.
+ *@brief Object's construction method.
  *
  *@param mode       - 'r' for reading
  *                    'w' for writing
@@ -100,7 +100,7 @@ IpcComm<T>::~IpcComm()
 }
 
 /*
- * @brief This method creates and opens FIFO IPC end in one of the following modes:
+ * @brief This method creates and opens FIFO IPC in one of the following modes:
  *        for reading or writing.
  *
  */
@@ -128,8 +128,8 @@ void IpcComm<T>::openFifo()
                       << std::endl;
             throw;
         }
+    
     } else if ('w' == mMode){
-
         /* open dummy read descriptor */
         mFifoDummyFd = open(mFifoPath.c_str(), O_RDONLY | O_NONBLOCK);
         if (-1 == mFifoDummyFd){
@@ -147,7 +147,7 @@ void IpcComm<T>::openFifo()
                       << std::endl;
             throw;
         }
-        
+
     } else {
         std::cerr << "IpcComm[ " << std::this_thread::get_id() << "]"
                   << " ERROR unknown parameter mode = "
