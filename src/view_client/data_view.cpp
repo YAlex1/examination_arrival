@@ -9,10 +9,10 @@ using namespace Ipc;
 /* */
 int main ()
 {
-    /* Currently is not used. May be used in further development */
+    /* Currently it is not used. May be used in further development */
     //DataView::DataViewClient<unsigned int> v;
 
-    std::cout << "Waiting for connection with the Data Generator process ..." << std::endl;
+    std::cout << "Waiting for a connection with the Data Generator process ..." << std::endl;
     /* Open IPC Communicator to read data from it. This object creation blocks untill the
      * data generator process will be launched.
      */
