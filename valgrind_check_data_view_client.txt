@@ -1,0 +1,36 @@
+alex@alexT30:~/Workspace/Temp/test_arrival/build$ valgrind  ./data_view_client
+==2984== Memcheck, a memory error detector
+==2984== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2984== Using Valgrind-3.14.0.GIT and LibVEX; rerun with -h for copyright info
+==2984== Command: ./data_view_client
+==2984== 
+Waiting for a connection with the Data Generator process ...
+Connection has been established.
+
+Current speed value is : 
+  0^C==2984== 
+==2984== Process terminating with default action of signal 2 (SIGINT)
+==2984==    at 0x56E6380: __write_nocancel (syscall-template.S:84)
+==2984==    by 0x5667C0E: _IO_file_write@@GLIBC_2.2.5 (fileops.c:1263)
+==2984==    by 0x5669418: new_do_write (fileops.c:518)
+==2984==    by 0x5669418: _IO_do_write@@GLIBC_2.2.5 (fileops.c:494)
+==2984==    by 0x566740F: _IO_file_sync@@GLIBC_2.2.5 (fileops.c:874)
+==2984==    by 0x565C82E: fflush (iofflush.c:40)
+==2984==    by 0x5164E3D: std::ostream::flush() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21)
+==2984==    by 0x401618: main (in /home/alex/Workspace/Temp/test_arrival/build/data_view_client)
+  0==2984== 
+==2984== HEAP SUMMARY:
+==2984==     in use at exit: 72,760 bytes in 2 blocks
+==2984==   total heap usage: 3 allocs, 1 frees, 73,784 bytes allocated
+==2984== 
+==2984== LEAK SUMMARY:
+==2984==    definitely lost: 0 bytes in 0 blocks
+==2984==    indirectly lost: 0 bytes in 0 blocks
+==2984==      possibly lost: 0 bytes in 0 blocks
+==2984==    still reachable: 72,760 bytes in 2 blocks
+==2984==         suppressed: 0 bytes in 0 blocks
+==2984== Rerun with --leak-check=full to see details of leaked memory
+==2984== 
+==2984== For counts of detected and suppressed errors, rerun with: -v
+==2984== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+

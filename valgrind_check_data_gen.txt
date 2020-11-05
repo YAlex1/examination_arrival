@@ -1,0 +1,25 @@
+alex@alexT30:~/Workspace/Temp/test_arrival/build$ valgrind  ./data_gen
+==2992== Memcheck, a memory error detector
+==2992== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2992== Using Valgrind-3.14.0.GIT and LibVEX; rerun with -h for copyright info
+==2992== Command: ./data_gen
+==2992== 
+Data genaration is started. Press <Ctrl+C> to quit.
+9  15  20  20  26  31  38  43  43  48  53  59  64  64  69  73  77  82  82  86  90  92  95  95  98  101  102  104  105  105  107  108  107  109  109  109  108  107  107  107  104  103  102  99  99  96  94  90  86  86  83  79  74  70  70  0  19  41  63  63  85  105  129  150  150  170  11  30  51  51  70  90  107  126  126  144  160  177  12  12  27  42  56  69  69  81  91  102  113  113  123  129  ^C
+Data generation is done. Bye!
+==2992== 
+==2992== HEAP SUMMARY:
+==2992==     in use at exit: 72,704 bytes in 1 blocks
+==2992==   total heap usage: 376 allocs, 375 frees, 96,105 bytes allocated
+==2992== 
+==2992== LEAK SUMMARY:
+==2992==    definitely lost: 0 bytes in 0 blocks
+==2992==    indirectly lost: 0 bytes in 0 blocks
+==2992==      possibly lost: 0 bytes in 0 blocks
+==2992==    still reachable: 72,704 bytes in 1 blocks
+==2992==         suppressed: 0 bytes in 0 blocks
+==2992== Rerun with --leak-check=full to see details of leaked memory
+==2992== 
+==2992== For counts of detected and suppressed errors, rerun with: -v
+==2992== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
