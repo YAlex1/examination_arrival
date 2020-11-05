@@ -23,7 +23,7 @@ int main ()
     std::cout << "Current speed value is : " << std::endl;
     while(true)
     {
-        /* print the received data to the console */
+        /* print a received data to the console */
         std::cout << '\r'
                   << std::setw(3) << std::setfill(' ') << *ipccomm
                   << std::flush;
