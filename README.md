@@ -15,5 +15,5 @@
 
 3. Launching.
 
-   There ./data_gen and ./data_view_client executables will be appeared in the build forlder.
+   There ./data_gen and ./data_view_client executables will be appeared in the build folder.
    Just launch both of them without any parameters on separate bash consoles.
